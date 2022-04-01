@@ -3,7 +3,7 @@
 <div class="mb-4">
   <?php get_template_part('breadcrumbs'); ?>
   <div class="row">
-    <div class="mt-5 col-9">
+    <div class="mt-5 col-12 col-lg-9">
       <div class="post-top-section d-flex">
         <div class="text-primary">
           <h1 class="primary-font bold">
@@ -11,7 +11,22 @@
           </h1>
         </div>
       </div>
-      <div class="mt-4 me-5 secondary-font text-primary post-content">
+      <div class="mt-4 me-lg-5 secondary-font text-primary post-content">
+        <?php
+          $children = zhm_get_menu_item_children(get_the_ID());
+
+          if ($children) {
+        ?>
+            <div class="child-pages bold">
+              <?php foreach ($children as $key => $child) { ?>
+                  <div class="mb-4 child-pages__item">
+                    <a href="<?php echo $child->url; ?>">
+                      <?php echo $child->title; ?>
+                    </a>
+                  </div>
+              <?php } ?>
+            </div>
+          <?php } ?>
         <?php the_content(); ?>
       </div>
     </div>

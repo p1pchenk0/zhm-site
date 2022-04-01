@@ -14,7 +14,7 @@
   <body <?php body_class(); ?>>
     <header class="container-fluid">
       <div class="header-top-content container py-3 py-md-4 mb-md-4">
-        <div class="row justify-content-between">
+        <div class="header-top-content__inner row justify-content-between">
           <div class="col-6 row">
             <?php get_template_part( 'logo', 'link' ); ?>
           </div>

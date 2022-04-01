@@ -22,7 +22,7 @@
                             'container'       => '',
                             'items_wrap'      => '%3$s',
                             'theme_location'  => 'primary',
-                            'add_li_class'    => 'nav-item secondary-font'
+                            'add_li_class'    => 'nav-item primary-font'
                         )
                     );
                 ?>

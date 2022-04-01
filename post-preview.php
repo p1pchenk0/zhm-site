@@ -7,8 +7,8 @@
         </div>
     <?php } ?>
     <div class="post-meta">
-        <h3 class="secondary-font mb-3"><?php echo $post->post_title ?></h3>
-        <div class="post-date primary-font bold mb-3">
+        <h3 class="primary-font bold mb-3"><?php echo $post->post_title ?></h3>
+        <div class="post-date secondary-font mb-3">
             <?php echo zhm_get_date($post->post_date); ?>
         </div>
         <?php echo zhm_get_button('Читати', get_permalink($post->ID)); ?>

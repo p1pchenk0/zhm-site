@@ -89,7 +89,7 @@
   function zhm_get_title($text, $extra_classes = '') {
     ob_start(); ?>
 
-    <h2 class="secondary-font text-primary bold mt-3 mt-md-5 mb-0 <?php echo $extra_classes; ?>">
+    <h2 class="primary-font text-primary bold mt-3 mt-md-5 mb-0 <?php echo $extra_classes; ?>">
       <?php echo $text; ?>
     </h2>
 
@@ -104,7 +104,7 @@
 
     <a
       href="<?php echo $link; ?>"
-      class="link-button <?php echo $extra_classes; ?>"
+      class="link-button primary-font bold <?php echo $extra_classes; ?>"
     >
       <span><?php echo $text; ?></span>
       <span class="ms-3"><?php echo $arrow; ?></span>

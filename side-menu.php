@@ -14,5 +14,10 @@
         );
       ?>
     </ul>
+
+    <?php echo zhm_get_title('Інші ресурси'); ?>
+    <div class="mt-5">
+      <?php get_template_part('side', 'links'); ?>
+    </div>
   </div>
 </div>

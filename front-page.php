@@ -1,14 +1,6 @@
 <?php get_header(); ?>
 <div class="row">
-  <div class="side-links-wrapper col-3">
-    <div id="sideLinks">
-      <?php echo zhm_get_title('Інші ресурси'); ?>
-      <div class="mt-5">
-        <?php get_template_part('side', 'links'); ?>
-      </div>
-    </div>
-  </div>
-  <section class="news-section mb-5 col-md-6">
+  <section class="news-section mb-5 col-md-9">
     <?php
       echo zhm_get_title('Останні новини');
       

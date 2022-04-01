@@ -21,13 +21,6 @@ window.onscroll = function (event) {
   classes[action](stickyClass);
 }
 
-if (document.getElementById('sideLinks')) {
-  var sidebar = new StickySidebar('#sideLinks', {
-    topSpacing: header.offsetHeight,
-    containerSelector: '.side-links-wrapper'
-  });
-}
-
 if (document.getElementById('sideMenu')) {
   var sidebar2 = new StickySidebar('#sideMenu', {
     topSpacing: header.offsetHeight,
@@ -63,6 +56,16 @@ function applyColorBlind() {
   document.documentElement.classList[action]('color-blind');
 
   colorBlindText.innerText = isColorBlindActive.value ? 'Звичайна версія сайту' : 'Людям із порушенням зору';
+
+  // setTimeout(function () {
+  //   sidebar2 = new StickySidebar('#sideMenu', {
+  //     topSpacing: header.offsetHeight,
+  //     containerSelector: '.side-menu-wrapper',
+  //     minWidth: 768
+  //   });
+  // }, 1000);
+  // setTimeout(function () { sidebar2.destroy(); }, 100);
+  // setTimeout(function () { sidebar2.updateSticky() }, 300);
 }
 
 function toggleColorBlind() {

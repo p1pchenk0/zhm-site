@@ -1,5 +1,5 @@
 <a href="/" class="home-link">
-    <div class="row">
+    <div class="row align-items-center">
         <img
             src="<?php echo get_template_directory_uri().'/assets/images/logo-bw.png' ?>"
             class="site-logo col-2 me-sm-2"

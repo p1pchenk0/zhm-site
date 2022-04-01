@@ -25,10 +25,7 @@
       <div class="mt-4 me-lg-5 secondary-font text-primary post-content">
         <?php the_content(); ?>
       </div>
-    </div>
-    <?php get_template_part('side', 'menu'); ?>
-  </div>
-  <?php
+      <?php
     $prev_post = get_previous_post();
     $next_post = get_next_post();
 
@@ -36,7 +33,7 @@
   ?>
     <?php echo zhm_get_title('Інші новини'); ?>
   <?php } ?>
-  <div class="row mt-3 other-posts primary-font bold justify-content-between">
+  <div class="row mt-3 me-lg-5 other-posts primary-font bold justify-content-between">
     <?php if ($prev_post) { ?>
       <a
         href="<?php echo get_permalink($prev_post->ID) ?>"
@@ -67,6 +64,9 @@
         <span class="fx"></span>
       </a>
     <?php } ?>
+  </div>
+    </div>
+    <?php get_template_part('side', 'menu'); ?>
   </div>
 </div>
 
