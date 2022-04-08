@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="row">
-  <section class="news-section mb-5 col-md-9">
+  <section class="news-section mb-5 col-lg-9">
     <?php
       echo zhm_get_title('Останні новини');
       

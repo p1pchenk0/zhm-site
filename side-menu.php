@@ -1,6 +1,6 @@
 <div class="side-menu-wrapper col-lg-3">
   <div id="sideMenu">
-    <?php echo zhm_get_title('Корисне'); ?>
+    <?php echo zhm_get_title('Корисне', 'ps-3'); ?>
 
     <ul class="side-menu navbar-nav mt-4 pb-3">
       <?php

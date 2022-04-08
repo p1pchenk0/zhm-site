@@ -10,7 +10,7 @@
     aria-label="Пошук"
     value="<?php the_search_query(); ?>"
     name="s"
-    class="me-md-2 bold primary-font"
+    class="me-md-2 bold primary-font full-width"
   >
   <button
     type="submit"

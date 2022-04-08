@@ -27,10 +27,11 @@
 
   add_action( 'customize_register', array( 'Zhm_Customize', 'register' ) );
 
-  // require get_template_directory() . '/custom-posts/zhm-link.php';
+  require get_template_directory() . '/custom-posts/zhm-doc.php';
 
   require get_template_directory() . '/misc/dynamic-css.php';
   require get_template_directory() . '/misc/utils.php';
+  require get_template_directory() . '/misc/upload-middleware.php';
   require get_template_directory() . '/misc/footer-info.widget.php';
 
   require get_template_directory() . '/classes/walker.php';

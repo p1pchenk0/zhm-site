@@ -65,10 +65,14 @@ body {
   height: 100%;
 }
 
+.full-width {
+  width: 100%;
+}
+
 .site-title {
   // font-family: 'Oswald', sans-serif;
   @extend .primary-font;
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   line-height: 1.2;
 
   @include tablet {
@@ -381,9 +385,6 @@ nav.navbar {
 }
 
 .side-menu {
-  position: relative;
-  left: -16px;
-
   .nav-item a {
     text-decoration: none;
     padding: 8px 16px;
@@ -490,7 +491,7 @@ nav.navbar {
   h3 {
     width: 75%;
 
-    @include mobile {
+    @include mini {
       width: 100%;
     }
   }
@@ -537,12 +538,17 @@ img {
 
 table {
   width: 100%;
+  table-layout: fixed;
 
   td {
     vertical-align: middle;
     text-align: center;
     border-width: 1px;
     padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
 
@@ -685,6 +691,10 @@ table {
 .side-links {
   margin-right: 30px;
 
+  @include mini {
+    margin-right: 0;
+  }
+
   &-wrapper {
     @media (max-width: 768px) {
       display: none;
@@ -821,7 +831,7 @@ html.color-blind {
   font-size: 18px;
 
   @include mini {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   header,

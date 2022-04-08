@@ -34,8 +34,12 @@ html {
   height: 100%;
 }
 
+.full-width {
+  width: 100%;
+}
+
 .site-title {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   line-height: 1.2;
 }
 @media (max-width: 1199px) {
@@ -319,10 +323,6 @@ html {
   }
 }
 
-.side-menu {
-  position: relative;
-  left: -16px;
-}
 .side-menu .nav-item a {
   text-decoration: none;
   padding: 8px 16px;
@@ -423,7 +423,7 @@ html {
 .post-meta h3 {
   width: 75%;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .post-meta h3 {
     width: 100%;
   }
@@ -468,12 +468,16 @@ img.alignleft {
 
 table {
   width: 100%;
+  table-layout: fixed;
 }
 table td {
   vertical-align: middle;
   text-align: center;
   border-width: 1px;
   padding: 10px;
+}
+table img {
+  max-width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -594,6 +598,11 @@ table td {
 .side-links {
   margin-right: 30px;
 }
+@media (max-width: 992px) {
+  .side-links {
+    margin-right: 0;
+  }
+}
 @media (max-width: 768px) {
   .side-links-wrapper {
     display: none;
@@ -711,7 +720,7 @@ html.color-blind {
 }
 @media (max-width: 992px) {
   html.color-blind {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 html.color-blind header,

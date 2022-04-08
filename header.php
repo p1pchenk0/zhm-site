@@ -15,10 +15,10 @@
     <header class="container-fluid">
       <div class="header-top-content container py-3 py-md-4 mb-md-4">
         <div class="header-top-content__inner row justify-content-between">
-          <div class="col-6 row">
+          <div class="col-7 row">
             <?php get_template_part( 'logo', 'link' ); ?>
           </div>
-          <div class="col-6 socials">
+          <div class="col-5 socials">
             <?php echo zhm_get_header_socials(); ?>
           </div>
         </div>
@@ -26,7 +26,7 @@
       <div class="container-fluid" id="header">
         <div class="container">
           <div class="row header-actions">
-            <div class="col-md-9 menu-part">
+            <div class="col-md-7 col-lg-9 menu-part">
               <div class="mobile-menu-wrapper">
                 <?php get_template_part('menu', 'mobile'); ?>
               </div>
@@ -48,7 +48,7 @@
                 </nav>
               <?php } ?>
             </div>
-            <div class="col-md-3 mt-md-2 search-part">
+            <div class="col-md-5 col-lg-3 mt-md-2 search-part">
               <?php get_search_form(); ?>
             </div>
           </div>
