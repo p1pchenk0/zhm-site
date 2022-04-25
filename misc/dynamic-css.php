@@ -7,7 +7,6 @@
     $header_color = !empty(get_theme_mod('header_color')) ? get_theme_mod('header_color') : $default_header_color;
 
     ob_start();
-
     ?>
 
     .post-meta {
@@ -22,7 +21,7 @@
       color: <?php echo $primary_color; ?>;
     }
 
-    .link-button svg {
+    .link-button svg, .extension-icon svg, .post-view-count svg, .breadcrumbs svg {
       fill: <?php echo $primary_color; ?>;
     }
 
@@ -34,16 +33,12 @@
       background-color: <?php echo $header_color; ?>;
     }
 
-    .search-button {
+    .search-button, .other-posts a {
       color: <?php echo $header_color; ?>;
     }
 
     .dropdown-menu {
       border-color: <?php echo $header_color; ?> !important;
-    }
-
-    .other-posts a {
-      color: <?php echo $header_color; ?>;
     }
 
     .other-posts svg {
@@ -54,9 +49,18 @@
       background-color: <?php echo $primary_color; ?>;
       border-color: <?php echo $primary_color; ?>;
     }
-
-    .side-link a {
+    
+    .ui-datepicker,
+    .ui-datepicker a,
+    .file-search input::placeholder,
+    #topBtn,
+    .side-link a
+     {
       color: <?php echo $primary_color; ?>;
+    }
+
+    #topBtn:hover {
+      background-color: <?php echo $primary_color; ?>;
     }
 
     .side-link a:hover {
@@ -65,12 +69,13 @@
       color: white;
     }
 
-    #topBtn {
-      color: <?php echo $primary_color; ?>;
+    .ui-datepicker-calendar td {
+      border-color: <?php echo $primary_color; ?>;
     }
 
-    #topBtn:hover {
+    .ui-datepicker a:hover, a.ui-state-active, .file-search input[type="submit"]:hover {
       background-color: <?php echo $primary_color; ?>;
+      color: white !important;
     }
 
     <?php

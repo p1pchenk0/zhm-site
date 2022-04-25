@@ -1,14 +1,14 @@
 <?php get_header(); ?>
-
+<?php zhm_set_post_view(); ?>
 <div class="mb-lg-4">
   <?php get_template_part('breadcrumbs'); ?>
   <div class="row">
     <div class="mt-3 mt-lg-5 col-lg-9 col-sm-12">
-      <div class="post-top-section d-flex">
+      <div class="post-top-section d-flex align-items-center">
         <div
-          class="post-main-image me-lg-4"
-          style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)"
+          class="me-lg-4 post-top-section__image-wrapper"
         >
+        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
         </div>
         <div class="text-primary">
           <div class="post-date mt-2 mt-lg-0 mb-3 secondary-font bold">
@@ -19,6 +19,9 @@
           </h1>
           <div class="post-read-time secondary-font bold mt-4">
             <span>Приблизна тривалість читання:&nbsp;<?php echo zhm_get_reading_time(get_the_content()); ?>&nbsp;хв.</span>
+            <div class="mt-1">
+              Переглядів: <?php echo zhm_get_post_view(); ?>
+            </div>
           </div>
         </div>
       </div>
@@ -40,7 +43,7 @@
         class="prev-post d-flex"
         style="background-image: url(<?php echo get_the_post_thumbnail_url($prev_post->ID); ?>);"
       >
-        <span class="post-frame d-flex full-height">
+        <span class="post-frame d-flex full-height full-width">
           <?php echo zhm_get_arrow(); ?>
           <span class="d-flex align-self-center other-post-title">
             <?php echo $prev_post->post_title; ?>
@@ -55,7 +58,7 @@
         class="next-post d-flex"
         style="background-image: url(<?php echo get_the_post_thumbnail_url($next_post->ID); ?>);"
       >
-        <span class="post-frame d-flex full-height">
+        <span class="post-frame d-flex full-height full-width">
           <span class="d-flex align-self-center other-post-title">
             <?php echo $next_post->post_title; ?>
           </span>

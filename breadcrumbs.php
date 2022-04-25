@@ -41,8 +41,7 @@
   <?php 
     $itemsCount = null;
 
-    if (is_page()) {
-    
+    if (is_page()) {    
     $items = zhm_get_menu_item_hierarchy(get_the_ID(), zhm_get_menu_items_by_registered_slug('primary'));
     $itemsCount = count($items);
     $i = 0;

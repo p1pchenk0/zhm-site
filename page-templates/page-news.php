@@ -7,14 +7,14 @@ Template Name: Сторінка новин
 <?php get_header(); ?>
   <?php get_template_part('breadcrumbs'); ?>
   <div class="row mb-3">
-    <div class="col-md-9">
+    <div class="col-lg-9">
       <?php echo zhm_get_title('Новини'); ?>
       <?php
         $current_page = get_query_var('paged');
 
         $news_query = new WP_Query(array(
           'post_type' => 'post',
-          'posts_per_page' => 5,
+          'posts_per_page' => 10,
           'paged' => $current_page
         ));
 

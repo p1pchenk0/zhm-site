@@ -87,3 +87,4 @@ applyColorBlind();
 //     window.location = linkItem.href;
 //   }
 // });
+

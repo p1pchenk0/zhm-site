@@ -18,7 +18,7 @@ html {
   }
 }
 
-.bold {
+.bold, .ui-datepicker table td a, .ui-datepicker-title {
   font-weight: 600;
 }
 
@@ -36,6 +36,10 @@ html {
 
 .full-width {
   width: 100%;
+}
+
+.relative {
+  position: relative;
 }
 
 .site-title {
@@ -163,12 +167,41 @@ html {
   height: 30px;
 }
 
+.post-wrapper .post-image {
+  max-width: 300px;
+  padding: 10px;
+  margin: auto;
+  display: block;
+}
+.post-wrapper .post-image-wrapper {
+  min-width: 300px;
+}
+@media (max-width: 768px) {
+  .post-wrapper .post-image-wrapper {
+    min-width: 100%;
+  }
+}
+.post-wrapper .post-view-count {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid;
+}
+.post-wrapper .post-view-count svg {
+  flex-shrink: 0;
+  width: 30px;
+  margin-right: 5px;
+}
 @media (max-width: 768px) {
   .post-wrapper {
     flex-wrap: wrap;
   }
   .post-wrapper .post-image {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -282,24 +315,6 @@ html {
   flex-wrap: nowrap;
 }
 
-.post-image {
-  background-size: cover;
-  background-position: center;
-  width: 200px;
-  height: 200px;
-  flex-shrink: 0;
-  position: relative;
-}
-.post-image-frame {
-  position: absolute;
-  left: 15px;
-  right: 15px;
-  top: 15px;
-  bottom: 15px;
-  margin: auto;
-  border: 1px solid white;
-}
-
 .site-logo {
   width: auto;
   height: 125px;
@@ -375,7 +390,7 @@ html {
   color: black;
 }
 
-.search-form input {
+.search-form input, .search-form select {
   border-width: 1px;
   padding: 8px 16px;
   background: transparent;
@@ -383,8 +398,27 @@ html {
   color: black;
   outline: none !important;
 }
-.search-form input::placeholder {
+.search-form input::placeholder, .search-form select::placeholder {
   color: black;
+}
+.search-form.file-search {
+  width: 450px;
+}
+@media (max-width: 768px) {
+  .search-form.file-search {
+    width: 100%;
+  }
+}
+.search-form.file-search input[type=submit] {
+  transition: all 0.15s ease-in-out;
+}
+.search-form .date-fields input {
+  width: 200px;
+}
+@media (max-width: 768px) {
+  .search-form .date-fields input {
+    width: 160px;
+  }
 }
 
 .dropdown-menu {
@@ -415,13 +449,16 @@ html {
   fill: white;
 }
 
+.post-meta {
+  flex-grow: 1;
+}
 @media (max-width: 768px) {
   .post-meta {
     margin-top: 8px;
   }
 }
 .post-meta h3 {
-  width: 75%;
+  width: 85%;
 }
 @media (max-width: 992px) {
   .post-meta h3 {
@@ -444,13 +481,29 @@ html {
 }
 
 @media (max-width: 768px) {
+  .post-top-section__image-wrapper {
+    width: 100%;
+  }
+}
+.post-top-section img {
+  max-width: 300px;
+}
+@media (max-width: 768px) {
   .post-top-section {
     flex-wrap: wrap;
+  }
+  .post-top-section img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
   }
 }
 
 .post-content {
   font-size: 1.2rem;
+}
+.post-content img {
+  max-width: 100%;
 }
 
 .post-read-time {
@@ -499,14 +552,18 @@ table img {
 @media (max-width: 768px) {
   .other-posts > a {
     width: 100%;
+    font-size: 1.2rem;
   }
   .other-posts > a:not(:last-of-type) {
     margin-bottom: 10px;
   }
+  .other-posts > a svg {
+    width: 30px;
+  }
 }
 .other-posts .fx {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   left: 0;
   right: 0;
   top: 0;
@@ -517,6 +574,11 @@ table img {
 }
 .other-posts .next-post .other-post-title {
   margin-right: 42px;
+}
+@media (max-width: 768px) {
+  .other-posts .next-post .other-post-title {
+    margin-right: 15px;
+  }
 }
 .other-posts svg {
   flex-shrink: 0;
@@ -537,6 +599,11 @@ table img {
 }
 .other-posts .prev-post .other-post-title {
   margin-left: 42px;
+}
+@media (max-width: 768px) {
+  .other-posts .prev-post .other-post-title {
+    margin-left: 15px;
+  }
 }
 .other-posts .prev-post svg {
   transform: rotate(180deg);
@@ -567,6 +634,55 @@ table img {
   padding: 4px;
 }
 
+.extension-icon svg {
+  width: 95px;
+}
+
+.file-description {
+  font-size: 1.1rem;
+}
+
+.ui-datepicker {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid;
+}
+.ui-datepicker-title {
+  text-align: center;
+}
+.ui-datepicker-header {
+  position: relative;
+  margin-bottom: 12px;
+}
+.ui-datepicker-header a {
+  position: absolute;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 2px;
+}
+.ui-datepicker-header a:first-of-type {
+  left: 0;
+}
+.ui-datepicker-header a:last-of-type {
+  right: 0;
+}
+.ui-datepicker-unselectable {
+  border: none;
+}
+.ui-datepicker table {
+  max-width: 300px;
+}
+.ui-datepicker table td {
+  padding: 0;
+}
+.ui-datepicker table td a {
+  text-decoration: none;
+  display: block;
+}
+.ui-datepicker table thead {
+  text-align: center;
+}
+
 /*
   Pagination
 */
@@ -579,6 +695,11 @@ table img {
   font-size: 1.25rem;
   margin-right: 8px;
   transition: all 0.15s ease-in-out;
+}
+@media (max-width: 768px) {
+  .news-pagination .page-numbers {
+    margin-bottom: 8px;
+  }
 }
 
 .news-pagination a.page-numbers {
@@ -715,6 +836,14 @@ table img {
   }
 }
 
+.ui-datepicker:not(.datepicker-visible) {
+  display: none !important;
+}
+
+.file-description .highlighted {
+  background-color: #e7e7e7;
+}
+
 html.color-blind {
   font-size: 18px;
 }
@@ -727,6 +856,7 @@ html.color-blind header,
 html.color-blind #header.sticky,
 html.color-blind .menu-item a:hover,
 html.color-blind .breadcrumbs a:hover,
+html.color-blind .ui-datepicker a:hover, html.color-blind a.ui-state-active, html.color-blind .file-search input[type=submit]:hover,
 html.color-blind footer {
   background-color: #e7e7e7 !important;
 }
@@ -738,8 +868,16 @@ html.color-blind .text-primary,
 html.color-blind .text-primary a,
 html.color-blind .post-meta,
 html.color-blind .link-button,
+html.color-blind .ui-datepicker, html.color-blind .ui-datepicker a,
+html.color-blind .file-search input[type=submit]:hover,
 html.color-blind #topBtn {
   color: black !important;
+}
+html.color-blind .file-search input::placeholder {
+  color: black !important;
+}
+html.color-blind .extension-icon svg {
+  fill: black !important;
 }
 html.color-blind .search-button {
   color: white;
